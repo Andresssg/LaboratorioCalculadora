@@ -4,8 +4,10 @@
  */
 package co.edu.unipiloto.servlet;
 
+import co.edu.unipiloto.session.CalcBeanLocal;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,6 +18,9 @@ import javax.servlet.http.HttpServletResponse;
  * @author Andres
  */
 public class RestaServlet extends HttpServlet {
+
+    @EJB
+    private CalcBeanLocal calcBean;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,7 +42,9 @@ public class RestaServlet extends HttpServlet {
             out.println("<title>Servlet RestaServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet RestaServlet at " + request.getContextPath() + "</h1>");
+            int a = Integer.parseInt(request.getParameter("aResta"));
+            int b = Integer.parseInt(request.getParameter("bResta"));
+            out.println("<h1>El resultado de la operación Resta es: " + calcBean.resta(a, b) + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

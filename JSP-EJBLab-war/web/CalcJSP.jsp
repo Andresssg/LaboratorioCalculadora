@@ -22,7 +22,7 @@
             <input type="submit" value="Sumar" />
         </form>
         
-        <form action="CalcServlet" method="post">
+        <form action="RestaServlet" method="post">
             <p>Restar a - b</p>
             <label for="paramAResta">a: </label>
             <input type="text" name="aResta" id="paramAResta"/><br>
@@ -30,7 +30,7 @@
             <input type="text" name="bResta" id="paramBResta"/><br>
             <input type="submit" value="Restar" />
         </form>
-        <form action="CalcServlet" method="post">
+        <form action="MultiplicacionServlet" method="post">
             <p>Multiplicar: a * b</p>
             <label for="paramAMultiplicacion">a: </label>
             <input type="text" name="aMultiplicacion" id="paramAMultiplicacion"/><br>
@@ -38,7 +38,7 @@
             <input type="text" name="bMultiplicacion" id="paramBMultiplicacion"/><br>
             <input type="submit" value="Multiplicar" />
         </form>
-        <form action="CalcServlet" method="post">
+        <form action="DivisionServlet" method="post">
             <p>Dividir: a / b</p>
             <label for="paramADivision">a: </label>
             <input type="text" name="aDivision" id="paramADivision"/><br>
@@ -46,7 +46,7 @@
             <input type="text" name="bDivision" id="paramBDivision"/><br>
             <input type="submit" value="Dividir" />
         </form>
-        <form action="CalcServlet" method="post">
+        <form action="ModuloServlet" method="post">
             <p>Modulo: a % b</p>
             <label for="paramAModulo">a: </label>
             <input type="text" name="aModulo" id="paramAModulo"/><br>
@@ -54,7 +54,7 @@
             <input type="text" name="bModulo" id="paramBModulo"/><br>
             <input type="submit" value="Sacar Residuo" />
         </form>
-        <form action="CalcServlet" method="post">
+        <form action="CuadradoServlet" method="post">
             <p>Elevar al cuadrado: a<sup>2</sup> </p>
             <label for="paramACuadrado">a: </label>
             <input type="text" name="aCuadrado" id="paramACuadrado"/><br>
