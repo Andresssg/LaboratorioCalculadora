@@ -45,6 +45,7 @@ public class ModuloServlet extends HttpServlet {
             int a = Integer.parseInt(request.getParameter("aModulo"));
             int b = Integer.parseInt(request.getParameter("bModulo"));
             out.println("<h1>El resultado de la operación Modulo es: " + calcBean.modulo(a, b) + "</h1>");
+            out.println("<a href=CalcJSP.jsp>Regresar a la calculadora</a>");
             out.println("</body>");
             out.println("</html>");
         }

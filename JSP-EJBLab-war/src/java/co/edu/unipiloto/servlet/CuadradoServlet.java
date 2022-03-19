@@ -44,6 +44,7 @@ public class CuadradoServlet extends HttpServlet {
             out.println("<body>");
             int a = Integer.parseInt(request.getParameter("aCuadrado"));
             out.println("<h1>El resultado de la operación Cuadrado es: " + calcBean.cuadrado(a) + "</h1>");
+            out.println("<a href=CalcJSP.jsp>Regresar a la calculadora</a>");
             out.println("</body>");
             out.println("</html>");
         }

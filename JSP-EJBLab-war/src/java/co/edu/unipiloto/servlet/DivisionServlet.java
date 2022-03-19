@@ -45,6 +45,7 @@ public class DivisionServlet extends HttpServlet {
             int a = Integer.parseInt(request.getParameter("aDivision"));
             int b = Integer.parseInt(request.getParameter("bDivision"));
             out.println("<h1>El resultado de la operación Division es: " + calcBean.division(a, b) + "</h1>");
+            out.println("<a href=CalcJSP.jsp>Regresar a la calculadora</a>");
             out.println("</body>");
             out.println("</html>");
         }

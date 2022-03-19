@@ -45,6 +45,7 @@ public class MultiplicacionServlet extends HttpServlet {
             int a = Integer.parseInt(request.getParameter("aMultiplicacion"));
             int b = Integer.parseInt(request.getParameter("bMultiplicacion"));
             out.println("<h1>El resultado de la operación Multiplicación es: " + calcBean.multiplicacion(a, b) + "</h1>");
+            out.println("<a href=CalcJSP.jsp>Regresar a la calculadora</a>");
             out.println("</body>");
             out.println("</html>");
         }
