@@ -42,9 +42,22 @@ public class CalcServlet extends HttpServlet {
             out.println("<title>Servlet CalcServlet</title>");
             out.println("</head>");
             out.println("<body>");
-            int a = Integer.parseInt(request.getParameter("aSuma"));
-            int b = Integer.parseInt(request.getParameter("aSuma"));
-            out.println("<h1>El resultado de la operación Suma es: " + calcBean.suma(a, b) + "</h1>");
+            
+            
+            if(request.getParameter("accion").equals("Sumar")){
+                out.print("<h1>Suma</h1>");
+            }else if(request.getParameter("accion").equals("Restar")){
+                out.print("<h1>Resta</h1>");
+            }else if(request.getParameter("accion").equals("Multiplicar")){
+                out.print("<h1>Multiplicacion</h1>");
+            }else if(request.getParameter("accion").equals("Dividir")){
+                out.print("<h1>Division</h1>");
+            }else if(request.getParameter("accion").equals("Sacar Residuo")){
+                out.print("<h1>Residuo</h1>");
+            }else if(request.getParameter("accion").equals("Elevar")){
+                out.print("<h1>Cuadrado</h1>");
+            }
+            
             out.println("<a href=CalcJSP.jsp>Regresar a la calculadora</a>");
             out.println("</body>");
             out.println("</html>");
