@@ -39,25 +39,33 @@ public class CalcServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet CalcServlet</title>");
+            out.println("<title>Calculadora</title>");
             out.println("</head>");
             out.println("<body>");
-            
-            
-            if(request.getParameter("accion").equals("Sumar")){
-                out.print("<h1>Suma</h1>");
-            }else if(request.getParameter("accion").equals("Restar")){
-                out.print("<h1>Resta</h1>");
-            }else if(request.getParameter("accion").equals("Multiplicar")){
-                out.print("<h1>Multiplicacion</h1>");
-            }else if(request.getParameter("accion").equals("Dividir")){
-                out.print("<h1>Division</h1>");
-            }else if(request.getParameter("accion").equals("Sacar Residuo")){
-                out.print("<h1>Residuo</h1>");
-            }else if(request.getParameter("accion").equals("Elevar")){
-                out.print("<h1>Cuadrado</h1>");
+            int a = Integer.parseInt(request.getParameter("valorA"));
+            int b = Integer.parseInt(request.getParameter("valorB"));
+            if (request.getParameter("accion").equals("Sumar")) {
+                out.println("<h1>El resultado de la operación Suma es: " + calcBean.suma(a, b) + "</h1>");
+            } else if (request.getParameter("accion").equals("Restar")) {
+                out.println("<h1>El resultado de la operación Resta es: " + calcBean.resta(a, b) + "</h1>");
+            } else if (request.getParameter("accion").equals("Multiplicar")) {
+                out.println("<h1>El resultado de la operación Multiplicación es: " + calcBean.multiplicacion(a, b) + "</h1>");
+            } else if (request.getParameter("accion").equals("Dividir")) {
+                out.println("<h1>El resultado de la operación Division es: " + calcBean.division(a, b) + "</h1>");
+            } else if (request.getParameter("accion").equals("Sacar Residuo")) {
+                out.println("<h1>El resultado de la operación Modulo es: " + calcBean.modulo(a, b) + "</h1>");
+            } else if (request.getParameter("accion").equals("Elevar")) {
+                if (a != 0 && b == 0) {
+                    out.println("<h1>El resultado de la operación Cuadrado es: " + calcBean.cuadrado(a) + "</h1>");
+                } else if (b != 0 && a == 0) {
+                    out.println("<h1>El resultado de la operación Cuadrado es: " + calcBean.cuadrado(b) + "</h1>");
+                } else if (a != 0 && b != 0) {
+                    out.println("<h1>El resultado de la operación para a es: " + calcBean.cuadrado(a) + "</h1>");
+                    out.println("<h1>El resultado de la operación para b es: " + calcBean.cuadrado(b) + "</h1>");
+                } else{
+                    out.println("<h1>El resultado de la operación Cuadrado es: " + calcBean.cuadrado(a) + "</h1>");
+                }
             }
-            
             out.println("<a href=CalcJSP.jsp>Regresar a la calculadora</a>");
             out.println("</body>");
             out.println("</html>");
